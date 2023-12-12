@@ -34,7 +34,8 @@ jobs:
         service-id: ${{ secrets.RENDER_EXAM_KEY }}
         api-key: ${{ secrets.RENDER_API_KEY }}
 
-  erun-ui-tests:
+  run-ui-tests:
+    needs: deploy-exam
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
