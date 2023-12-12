@@ -21,3 +21,5 @@ jobs:
       run: npm install
     - name: Start unit tests
       run: npm run test:unit
+    - name: Dispaly Softuni username
+      run: echo "viktorybg"
