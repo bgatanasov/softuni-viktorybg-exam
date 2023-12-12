@@ -23,3 +23,12 @@ jobs:
       run: npm run test:unit
     - name: Dispaly Softuni username
       run: echo "viktorybg"
+
+  deploy-exam:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Deploy Exam prep
+      uses: johnbeynon/render-deploy-action@v0.0.8
+      with:
+        service-id: ${{ secrets.RENDER_EXAM_KEY }}
+        api-key: ${{ secrets.RENDER_API_KEY }}
